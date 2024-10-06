@@ -42,6 +42,8 @@ body {
     box-shadow: none;
 }
 
+#user{display: none;}
+
 /* Hero Section */
 #hero {
     background-image: url(../IMGS/hero4.png);
