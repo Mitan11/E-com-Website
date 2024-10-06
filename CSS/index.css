@@ -19,14 +19,15 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(13 110 253);
+    background: rgb(88, 88, 88);
     border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(11, 86, 199);
+    background: rgb(81, 81, 81);
 }
 
+/* Navbar */
 .navbar-toggler {
     border: none;
     border-radius: 0;
@@ -40,3 +41,66 @@ body {
     outline: 0;
     box-shadow: none;
 }
+
+/* Hero Section */
+#hero {
+    background-image: url(../IMGS/hero4.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#hero button {
+    background-image: url(../IMGS/button.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-color: transparent;
+    border: none;
+    padding: 14px 88px 14px 65px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* Features Section */
+#features .f-card {
+    /* width: 180px; */
+    transition: 0.3s all linear;
+}
+
+#features .f-card:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+/* Media Querys */
+/* Small devices (Phone , 220px and up) */
+@media (min-width: 220px) and (max-width: 575px) {
+    #hero button {
+        padding: 7px 34px 6px 34px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+    #hero button {
+        padding: 7px 34px 6px 34px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1599px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
