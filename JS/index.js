@@ -124,7 +124,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const updatedUsers = users.map((user) => {
                 if (user.email === currentUser.email) {
-                    return { user, status: false };
+                    return { name: user.name,
+                        email: user.email,
+                        password: user.password, status: false };
                 }
                 return user;
             });
