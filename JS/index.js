@@ -1,10 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const loginForm = document.getElementById('login-form');
     const signupForm = document.getElementById('signup-form');
     const user = document.getElementById('user');
     const loginSignup = document.getElementById('login-signup');
     const toastElement = document.getElementById('liveToast');
-    const toastBody = toastElement.querySelector('.toast-body');    
+    const toastBody = toastElement.querySelector('.toast-body');
     const toast = new bootstrap.Toast(toastElement);
 
     window.addEventListener('load', function () {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.show();
         }
     });
-    
+
     // Function to check and update user status
     function checkUserStatus() {
         const currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -33,14 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // Handle signup form submission
-    signupForm.addEventListener('submit', function(e) {
+    signupForm.addEventListener('submit', function (e) {
         e.preventDefault(); // Prevent the form from submitting normally
         // Get user input
         const name = document.getElementById('signup-name').value;
         const email = document.getElementById('signup-email').value;
         const password = document.getElementById('signup-password').value;
         const confirmPassword = document.getElementById('signup-confirm-password').value;
-        
+
         // Check if passwords match
         if (password !== confirmPassword) {
             toastBody.textContent = 'Passwords do not match';
@@ -80,15 +80,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Handle login form submission
-    loginForm.addEventListener('submit', function(e) {
+    loginForm.addEventListener('submit', function (e) {
         e.preventDefault(); // Prevent the form from submitting normally
         // Get user input
         const email = document.getElementById('login-email').value;
         const password = document.getElementById('login-password').value;
-        
+
         // Check if user exists and credentials are correct
         const users = JSON.parse(localStorage.getItem('users')) || [];
-        const user = users.find(u => u.email === email && u.password === password);
+        console.log(users);
+
+        const user = users.find((u) => u.email === email && u.password === password);
+        console.log(user);
 
         if (user) {
             user.status = true;
@@ -116,17 +119,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Logout functionality
     const logoutButton = document.getElementById('logout-button');
-    
-    logoutButton.addEventListener('click', function() {
+
+    logoutButton.addEventListener('click', function () {
         const currentUser = JSON.parse(localStorage.getItem('currentUser'));
         if (currentUser) {
             const users = JSON.parse(localStorage.getItem('users')) || [];
-            
+
             const updatedUsers = users.map((user) => {
                 if (user.email === currentUser.email) {
-                    return { name: user.name,
-                        email: user.email,
-                        password: user.password, status: false };
+                    return { user, status: false };
                 }
                 return user;
             });
@@ -143,4 +144,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 

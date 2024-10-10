@@ -20,7 +20,8 @@
 </head>
 
 <body>
-    <header class="position-sticky top-0 shadow-sm">
+    <!-- Navbar -->
+    <header class="position-sticky top-0 z-1 shadow-sm">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand" href="./index.html"><img src="./IMGS/logo.png" alt="" /></a>
@@ -42,19 +43,20 @@
                                 <a class="nav-link d-inline-block active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-inline-block" href="#">Shop</a>
+                                <a class="nav-link d-inline-block" href="./Pages/Shop.html">Shop</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-inline-block" href="#">Blog</a>
+                                <a class="nav-link d-inline-block" href="./Pages/Blog.html">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-inline-block" href="#">About</a>
+                                <a class="nav-link d-inline-block" href="./Pages/About.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-inline-block" href="#">Contact</a>
+                                <a class="nav-link d-inline-block" href="./Pages/Contact.html">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link d-inline-block" href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                                <a class="nav-link d-inline-block" href="./Pages/Cart.html"><i
+                                        class="fa-solid fa-bag-shopping"></i></a>
                             </li>
                             <li class="nav-item" id="login-signup">
                                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginsignup">
@@ -76,11 +78,12 @@
                         </ul>
                     </div>
                 </div>
-                
+
             </div>
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section id="hero" class="w-100 vh-100">
         <div class="container">
             <h4>Trade-in-offer</h4>
@@ -91,6 +94,7 @@
         </div>
     </section>
 
+    <!-- Features Section -->
     <section id="features" class="bg-body-tertiary w-100 p-5">
         <div class="container">
             <div class="row justify-content-center gap-4">
@@ -154,6 +158,108 @@
 
     </section>
 
+    <!-- Featured Products -->
+    <section class="container-fluid bg-body-tertiary p-5">
+        <div class="text-center">
+            <h1 class="fw-bold pb-2">Featured Products</h1>
+            <p class="pb-4">Summer Collection New Modern Design</p>
+        </div>
+        <div class="container">
+            <div class="row justify-content-md-between justify-content-sm-center  justify-content-center row-gap-5"
+                id="card-section">
+
+            </div>
+
+            <div class="row justify-content-center">
+                <a href="./Pages/Shop.html" class="mt-5 btn btn-primary w-25">View More</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-5">
+        <div class="container-4">
+            <div class="para-4">
+                <h3 class="heading3">Sign Up For Newsletters</h3>
+                <p>Get E-mail updates about our latest shop and <mark> spacial offers.</mark></p>
+            </div>
+            <div>
+                <input id="search-1" class="search-input" type="search" placeholder="Your Email Address">
+                <button onclick="alrt()" class="button-1">search</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <section class="section-6">
+            <div class="contact-1">
+                <div class="contact-se1">
+                    <div class="logo">
+                        <img src="../IMGS/logo.png" alt="">
+                    </div>
+                    <h5>Contact</h5>
+                    <div class="deatils">
+                        <p class="address">Address : 562 Wllington rood, Street 32. San Francisco</p>
+                        <p class="address">Phone : +01 2222 365/(+91) 01 2345 6789</p>
+                        <p class="address">Hours : 10:00 - 18:00, Mon - Sat</p>
+                    </div>
+                    <div class="social-m">
+                        <h5>Follow Us</h4>
+                            <div class="icons">
+                                <a href=""><img src="../IMGS/facebook.svg" alt=""></a>
+                                <a href=""><img src="../IMGS/instagram.svg" alt=""></a>
+                                <a href=""><img src="../IMGS/twitter.svg" alt=""></a>
+                            </div>
+
+                    </div>
+
+                </div>
+                <div class="contact-se2">
+                    <div class="about">
+                        <h5>About</h5>
+                    </div>
+                    <div class="deatils-2">
+                        <p class="p1">About Us</p>
+                        <p class="p1">Delivery Info.</p>
+                        <p class="p1">Privacy Policy</p>
+                        <p class="p1">Terms & Conditions</p>
+                        <p class="p1">Contact Us </p>
+                    </div>
+                </div>
+                <div class="contact-se3">
+                    <div class="about">
+                        <h5>My Account</h5>
+                    </div>
+                    <div class="deatils-2">
+                        <p class="p1">Sign In</p>
+                        <p class="p1">View cart</p>
+                        <p class="p1">My wishlist</p>
+                        <p class="p1">Track My Order</p>
+                        <p class="p1">Help</p>
+                    </div>
+                </div>
+                <div class="contact-se4">
+                    <div class="about">
+                        <h5>Install App</h5>
+                    </div>
+                    <p class="p1">From App stor or Google Play</p>
+                    <div class="app">
+                        <img class="play" src="../IMGS/app.jpg" alt="">
+                        <img class="play" src="../IMGS/play.jpg" alt="">
+                    </div>
+                    <p class="p1">Secured Payments Gatways</p>
+                    <div class="payment">
+                        <img src="../IMGS/pay.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-2"></div>
+        </section>
+    </footer>
+
+    <!-- Toast -->
 
     <div class="toast-container position-fixed top-0 end-0 p-3">
         <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -245,6 +351,8 @@
         crossorigin="anonymous"></script>
     <!-- Script File -->
     <script src="./JS/index.js"></script>
+    <script src="./JS/product.js"></script>
+    <script src="./JS/cart.js"></script>
 </body>
 
 </html>
